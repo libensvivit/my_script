@@ -40,7 +40,7 @@ GM_addStyle (`
 
 `);
 
-var intervalObj;
+var intervalObj, historyObj;
 $("#pacman").click(function(){
     if(_STATUS == 0){ // ACTIVATE
         _STATUS = 1;
