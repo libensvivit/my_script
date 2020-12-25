@@ -3,8 +3,9 @@ var _STATUS = 0; // ON or OFF
 $("body").append (`
 <div id="container">
     <img id="pacman" src="https://i.ibb.co/4WmZXzv/2.png" alt="image" border="0">
-    <p id="status">OFF</p>
-    <p id="info"></p>
+    <div id="status">OFF</div>
+    <div id="info"></div>
+    <div id="gui-container"></div>
 </div>
 `);
 
@@ -38,6 +39,23 @@ GM_addStyle (`
     text-align: center;
 }
 
+#gui-container{
+    position: relative;
+    top: 30px;
+    height: 300px;
+}
+
+.gui-element{
+    width: 100%;
+}
+
+.gui-item, .gui-price{
+    width: 43%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
 `);
 
 var intervalObj, historyObj;
@@ -66,4 +84,18 @@ $("#pacman").click(function(){
 
         return true;
     }
+});
+
+data = [];
+
+for(let i = 0; i < 5; i++){
+    $("#gui-container")
+        .append($("<div class='gui-element'>")
+            .append($("<input class='gui-item'>").val("LOL"))
+            .append($("<input class='gui-price'>"))
+        );
+}
+
+$(".gui-item").each(function(index, element){
+    console.log($(this).val());
 });
