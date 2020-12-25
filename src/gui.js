@@ -1,5 +1,3 @@
-
-///// USER INTERFACE /////
 var _STATUS = 0; // ON or OFF
 
 $("body").append (`
@@ -52,12 +50,6 @@ GM_addStyle (`
 
 `);
 
-
-$("#item4255299 .box-title").text("Modified Box");
-$("#item4255299 div:first").addClass('title-red').removeClass('title-black');
-$("#personal-perks ul:first").text("");
-
-//log("YAY", "purple");
 var intervalObj;
 $("#pacman").click(function(){
     if(_STATUS == 0){ // ACTIVATE
@@ -85,4 +77,3 @@ $("#pacman").click(function(){
         return true;
     }
 });
-///// USER INTERFACE ///// END
