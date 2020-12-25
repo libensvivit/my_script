@@ -64,12 +64,12 @@ $("#pacman").click(function(){
         _STATUS = 1;
         $("#status").text("ON");
         $("#status").css("color", "green");
-        $("#info").text(Math.ceil(60/INTERVAL*Object.keys(mapped).length) + " calls/min");
+        $("#info").text(Math.ceil(60/INTERVAL*Object.keys(defaultMapped).length) + " calls/min");
         $("#pacman").attr("src","https://i.ibb.co/C86VQ4v/1.png");
 
         DOSTUFF();
-        intervalObj = setInterval(DOSTUFF, INTERVAL*1000); log("API calls started.", "green");
-        historyObj = setInterval(function(){ history = []; log("History cleaned.", "purple"); }, 60*1000);
+        intervalObj = setInterval(DOSTUFF, INTERVAL*1000); print("API calls started.", "green");
+        historyObj = setInterval(function(){ history = []; print("History cleaned.", "purple"); }, 60*1000);
 
         return true;
     }
@@ -85,27 +85,3 @@ $("#pacman").click(function(){
         return true;
     }
 });
-
-data = [];
-
-for(let i = 0; i < 5; i++){
-    $("#gui-container")
-        .append($("<div class='gui-element'>")
-            .append($("<input class='gui-item'>").val("LOL"))
-            .append($("<input class='gui-price'>"))
-        );
-    data.push({
-        item: "",
-        price: 0
-    });
-}
-
-$(".gui-item").each(function(index, element){
-    data[index].item = $(this).val();
-});
-
-$(".gui-price").each(function(index, element){
-    data[index].price = $(this).val();
-});
-
-console.log(data);
