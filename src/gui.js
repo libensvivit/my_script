@@ -5,7 +5,6 @@ $("body").append (`
     <img id="pacman" src="https://i.ibb.co/4WmZXzv/2.png" alt="image" border="0">
     <p id="status">OFF</p>
     <p id="info"></p>
-    <p id="log"></p>
 </div>
 `);
 
@@ -17,7 +16,6 @@ GM_addStyle (`
     left: 0%;
     top: 0%;
     font-weight: bold;
-    user-select: none;
 }
 
 #pacman{
@@ -38,14 +36,6 @@ GM_addStyle (`
     position: relative;
     top: 20px;
     text-align: center;
-}
-
-#log{
-    position: relative;
-    top: 25px;
-    left: 5px;
-    font-size: 8pt;
-    width: auto;
 }
 
 `);

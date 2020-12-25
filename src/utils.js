@@ -41,4 +41,3 @@ function checkItemByName(name){
         onload:         processJSON_Response
     });
 }
-
