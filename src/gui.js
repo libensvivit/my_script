@@ -94,8 +94,18 @@ for(let i = 0; i < 5; i++){
             .append($("<input class='gui-item'>").val("LOL"))
             .append($("<input class='gui-price'>"))
         );
+    data.push({
+        item: "",
+        price: 0
+    });
 }
 
 $(".gui-item").each(function(index, element){
-    console.log($(this).val());
+    data[index].item = $(this).val();
 });
+
+$(".gui-price").each(function(index, element){
+    data[index].price = $(this).val();
+});
+
+console.log(data);
