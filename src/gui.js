@@ -85,3 +85,35 @@ $("#pacman").click(function(){
         return true;
     }
 });
+
+///////////////////////////////////////////////////////////////////////
+/*data = [];
+
+for(let i = 0; i < 5; i++){
+    $("#gui-container")
+        .append($("<div class='gui-element'>")
+            .append($("<input class='gui-item'>").val("LOL"))
+            .append($("<input class='gui-price'>"))
+        );
+    data.push({
+        item: "",
+        price: ""
+    });
+}
+
+$(".gui-item").each(function(index, element){
+    data[index].item = $(this).val();
+    $(this).change(function(){
+        data[index].item = $(this).val();
+        console.log(data);
+    });
+});
+
+$(".gui-price").each(function(index, element){
+    data[index].price = $(this).val();
+    $(this).change(function(){
+        data[index].price = $(this).val();
+        console.log(data);
+    });
+});
+*/
