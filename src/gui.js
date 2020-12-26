@@ -64,23 +64,23 @@ $("#pacman").click(function(){
         _STATUS = 1;
         $("#status").text("ON");
         $("#status").css("color", "green");
-        $("#info").text(Math.ceil(60/INTERVAL*Object.keys(defaultMapped).length) + " calls/min");
+        $("#info").text(Math.ceil(60/INTERVAL*Object.keys(mapped).length) + " calls/min");
         $("#pacman").attr("src","https://i.ibb.co/C86VQ4v/1.png");
 
         DOSTUFF();
         intervalObj = setInterval(DOSTUFF, INTERVAL*1000); print("API calls started.", "green");
-        historyObj = setInterval(function(){ history = []; print("History cleaned.", "purple"); }, 60*1000);
+        //historyObj = setInterval(function(){ history = []; print("History cleaned.", "purple"); }, 60*1000);
 
         return true;
     }
     if(_STATUS == 1){ // DEACTIVATE
-        _STATUS = 0; history = [];
+        _STATUS = 0; //history = [];
         $("#status").text("OFF");
         $("#status").css("color", "red");
         $("#pacman").attr("src","https://i.ibb.co/4WmZXzv/2.png");
 
         clearInterval(intervalObj); print("API calls stopped.", "red");
-        clearInterval(historyObj); history = []; print("History cleaned.", "purple");
+        //clearInterval(historyObj); history = []; print("History cleaned.", "purple");
 
         return true;
     }
