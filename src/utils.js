@@ -25,8 +25,8 @@ function notify(name, item){
 function checkItemByName(name){
     function processJSON_Response(responseObj){
         var item = responseObj.response.bazaar[0];
-        print(name + ", " + item.cost + ", " + new Date().toLocaleTimeString(), "blue");
-        if(item.cost <= name2ID(name).min){ //&& !history.includes(item.id)
+        log(name + ", " + item.cost + ", " + new Date().toLocaleTimeString(), "blue");
+        if(item.cost < name2ID(name).min){ //&& !history.includes(item.id)
             //log("Found " + name + " at $" + numberWithCommas(item.cost) + ", " + new Date().toLocaleTimeString());
 
             //history.push(item.id);

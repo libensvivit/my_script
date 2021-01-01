@@ -68,7 +68,7 @@ $("#pacman").click(function(){
         $("#pacman").attr("src","https://i.ibb.co/C86VQ4v/1.png");
 
         DOSTUFF();
-        intervalObj = setInterval(DOSTUFF, INTERVAL*1000); print("API calls started.", "green");
+        intervalObj = setInterval(DOSTUFF, INTERVAL*1000); log("API calls started.", "green");
         //historyObj = setInterval(function(){ history = []; print("History cleaned.", "purple"); }, 60*1000);
 
         return true;
@@ -79,7 +79,7 @@ $("#pacman").click(function(){
         $("#status").css("color", "red");
         $("#pacman").attr("src","https://i.ibb.co/4WmZXzv/2.png");
 
-        clearInterval(intervalObj); print("API calls stopped.", "red");
+        clearInterval(intervalObj); log("API calls stopped.", "red");
         //clearInterval(historyObj); history = []; print("History cleaned.", "purple");
 
         return true;
